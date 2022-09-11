@@ -9,7 +9,7 @@ The format is quite simple if you want to add more
 Written as an example
 * 16:15|quarter past four|At a quarter past four he stumbled home drunk|Foo-Book Title|Bar-Author
 
-##Using the script
+## Using the script
 Run the script in the same location as the csv quotes file - it's PHP - you'll need the gd extension and image magic extension, check where the fonts are coming from or just dump them in the same folder as the php file like I have here, check the csv file name it will be using. You need to create the image and image/metadata folders for the script to put the images in.
 
 The script produces a folder of images without metadata (author, title) and a folder with the metadata added. I have removed the 'quiz' function which needs this so I take the metadata folder images and use them to replace the standard image folder images.
