@@ -20,14 +20,13 @@ $creditFont = './baskervilleboldbt.ttf';
 // get the quotes (including title and author) from a CSV file, 
 // and create unique images for them, one without and one with title and author
 $row = 1;
-if (($handle = fopen("litclock_annotated_expanded.csv", "r")) !== FALSE) {
+if (($handle = fopen("litclock_annotated_br2.csv", "r")) !== FALSE) {
     while (($data = fgetcsv($handle, 1000, "|")) !== FALSE) {
         $num = count($data);
         $row++;
         $time = $data[0];
         $timestring = trim($data[1]);
-        $quote = $data[2];
-        $quote = trim(preg_replace('/\s+/', ' ', $quote));
+        $quote = trim($data[2]);
         $title = trim($data[3]);
         $author = trim($data[4]);
 
@@ -85,8 +84,8 @@ function TurnQuoteIntoImage($time, $quote, $timestring, $title, $author) {
 
     print "Image for " . $time .'_'. $imagenumber . "\n";
 
-    // Save the image (commented out to remove the No Metadata images)
-    imagepng($png_image, 'images/quote_'.$time.'_'.$imagenumber.'.png');
+    // Save the image
+    imagepng($png_image, 'images/nometadata/quote_'.$time.'_'.$imagenumber.'.png');
 
 
     ///// METADATA /////
@@ -154,7 +153,7 @@ function TurnQuoteIntoImage($time, $quote, $timestring, $title, $author) {
     }
 
     // Save the image with metadata
-    imagepng($png_image, 'images/metadata/quote_'.$time.'_'.$imagenumber.'.png');
+    imagepng($png_image, 'images/quote_'.$time.'_'.$imagenumber.'.png');
 
     // Free up memory
     imagedestroy($png_image);
@@ -168,10 +167,10 @@ function TurnQuoteIntoImage($time, $quote, $timestring, $title, $author) {
 
     // convert the image we made to greyscale 
     $im = new Imagick();
-    $im->readImage('images/metadata/quote_'.$time.'_'.$imagenumber.'.png');
+    $im->readImage('images/nometadata/quote_'.$time.'_'.$imagenumber.'.png');
     $im->setImageType(Imagick::IMGTYPE_GRAYSCALE);
-    unlink('images/metadata/quote_'.$time.'_'.$imagenumber.'.png');
-    $im->writeImage('images/metadata/quote_'.$time.'_'.$imagenumber.'.png');
+    unlink('images/nometadata/quote_'.$time.'_'.$imagenumber.'.png');
+    $im->writeImage('images/nometadata/quote_'.$time.'_'.$imagenumber.'.png');
 
 }
 
