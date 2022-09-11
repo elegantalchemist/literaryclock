@@ -1,7 +1,7 @@
 <?php
 
 // this script turns quotes from books into images for use in a Kindle clock.
-// Jaap Meijers, 2018
+// Originally by Jaap Meijers, 2018, modified by ElegantAlchemist, 2022.
 
 
 error_reporting(E_ALL);
