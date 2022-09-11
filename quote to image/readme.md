@@ -15,4 +15,4 @@ Run the script in the same location as the csv quotes file - it's PHP - you'll n
 The script produces a standard folder of images with metadata (author, title) and a folder without the metadata added. The code used to have a 'quiz' function which I have removed so you only need the standard images with metadata now.
 
 ## Images here
-If the whole PHP thing isn't your bag, the zip file here contains the images and nometadata folders zipped up already - you can unzip to where they belong /mnt/us/timelit/images/nometadata
+If the whole PHP thing isn't your bag, the zip file here (split into 5 pieces) contains the images and nometadata folders zipped up already - you can unzip to where they belong /mnt/us/timelit/images/nometadata
