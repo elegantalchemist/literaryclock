@@ -10,6 +10,23 @@ Repurposing a Kindle into a clock which tells time entirely through real book qu
 ## Build Instructions
 The overview is fairly simple. Jailbreak the kindle, install launchpad, install USBNetwork, install Python. Use something like USB transfer to transfer all the files to the right place and then SSH into the kindle to set a cronjob. The SSH is the hardest part by far but it's only needed for a very small part.
 
+* **WARNING** None of this is what the kindle is designed to do and it's not hard to get it wrong and brick the Kindle. Do not proceed unless you are comfortable with this risk.
+* **Step One** - jailbreak the kindle and install appropriate software
+* **Jailbreak the kindle** Connect the kindle to USB, extract and copy over the jailbreak install file for the correct kindle model. Disconnect from USB, Menu -> Settings -> Update. When you reconnect to USB it will now have a linkjail folder.
+* **Install Launchapd** Same as before, copy over the appropriate launchpad files, update, restart. It will now have a launchpad folder
+* **Install usbNetwork** Same as before, copy over the appropriate usbnetwork files, update, restart. It will now have a usbnet folder.
+* **Install Python** Same as before, copy over the appropriate python files, update, restart. Can't tell if this one works though.
+
+* **Step Two** - install the scripts for this project
+* Connect the Kindle to USB and you will see the storage on your computer available. This is /mnt/us in the linux filesystem so it's easier to copy and paste here over USb than trying to use rsync or SSH or whatever.
+Copy and paste over the utils folder.
+Copy and paste over the timelit folder into /mnt/us so there now exists /mnt/us/timelit/ which contains the scripts.
+In the timelit -> conf folder rename the mac-address-here.conf file to your mac address lower case with hyphen replacing dots.
+Copy and paste over the utils folder into /mnt/us so there now exists /mnt/us/utils which contains other utility scripts
+Copy the startclock.conf file to the /mnt/us/launchpad folder (this provides the key combo to enable SSH as well as the clock).
+
+
+
 ## Credits
 * The original project instructables by tjaap - https://www.instructables.com/Literary-Clock-Made-From-E-reader/
 * Updated and modified scripts for running it by knobunc - https://github.com/knobunc/kindle-clock
