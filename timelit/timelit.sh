@@ -9,6 +9,7 @@ test -f "$BASEDIR/clockisticking" || exit
 
 
 ## Set some defaults for the settings
+# This file uses UK time (GMT/BST)
 TZ='EST+5EDT,M3.2.0/2,M11.1.0/2'
 
 
@@ -22,6 +23,11 @@ fi
 
 # Find the current minute of the day
 MinuteOTheDay="$(env TZ="$TZ" date -R +"%H%M")";
+
+# ALTERNATIVE TIME KEEPING - comment out the one above and uncomment this one to simply pull the 
+# internal Kindle time (Settings -> menu -> device time) for your time if you can't figure
+# out the correct timezone coding
+# MinuteOTheDay="$(date-R +"%H%M")";
 
 # Check if there is at least one image for this minute
 lines="$(find "$BASEDIR/images/quote_$MinuteOTheDay"* 2>/dev/null | wc -l)"
@@ -55,6 +61,6 @@ fi
 eips $clearFlag -g $ThisMinuteImage
 
 # If there's an upgrade status file, print it
-if [ -f "$BASEDIR/../updatestatus" ]; then
-    eips 0 39 "`cat $BASEDIR/../updatestatus`"
-fi
+#if [ -f "$BASEDIR/../updatestatus" ]; then
+#    eips 0 39 "`cat $BASEDIR/../updatestatus`"
+#fi
