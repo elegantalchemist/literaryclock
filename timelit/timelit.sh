@@ -27,7 +27,7 @@ MinuteOTheDay="$(env TZ="$TZ" date -R +"%H%M")";
 # ALTERNATIVE TIME KEEPING - comment out the one above and uncomment this one to simply pull the 
 # internal Kindle time (Settings -> menu -> device time) for your time if you can't figure
 # out the correct timezone coding
-# MinuteOTheDay="$(date-R +"%H%M")";
+# MinuteOTheDay="$(date -R +"%H%M")";
 
 # Check if there is at least one image for this minute
 lines="$(find "$BASEDIR/images/quote_$MinuteOTheDay"* 2>/dev/null | wc -l)"
