@@ -8,7 +8,11 @@ Repurposing a Kindle into a clock which tells time entirely through real book qu
 * **Computer connection** for use with SSH and transferring files
 
 ## Build Instructions
-The overview is fairly simple. Jailbreak the kindle, install launchpad, install USBNetwork, install Python. Use something like USB transfer to transfer all the files to the right place and then SSH into the kindle to set a cronjob. The SSH is the hardest part by far but it's only needed for a very small part.
+The overview is fairly simple. Jailbreak the kindle, install launchpad, install USBNetwork, install Python. Use something like USB transfer to transfer all the files to the right place and then SSH into the kindle to set a cronjob.
+
+That's it. Copy some files, then one CronJob + copy a file via SSH. I've tried to provide very detailed steps below - it might look more daunting before you get started.
+
+The SSH is the hardest part by far but it's only needed for a small part
 
 * **WARNING** None of this is what the kindle is designed to do and it's not hard to get it wrong and brick the Kindle. Do not proceed unless you are comfortable with this risk.
 
