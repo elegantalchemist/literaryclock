@@ -7,7 +7,7 @@ Repurposing a Kindle into a clock which tells time entirely through real book qu
 * **Kindle 3 Keyboard** (I think this can be run on multiple models but I haven't explored this yet - I have touch and non--touch to try out)
 * **Computer connection** for use with SSH and transferring files
 
-## Build Instructions
+## Build Overview
 The overview is fairly simple. Jailbreak the kindle, install launchpad, install USBNetwork, install Python. Use something like USB transfer to transfer all the files to the right place and then SSH into the kindle to set a cronjob.
 
 That's it. Copy some files, then one CronJob + copy a file via SSH. I've tried to provide very detailed steps below - it might look more daunting before you get started.
@@ -16,11 +16,12 @@ The SSH is the hardest part by far but it's only needed for a small part
 
 * **WARNING** None of this is what the kindle is designed to do and it's not hard to get it wrong and brick the Kindle. Do not proceed unless you are comfortable with this risk.
 
-* **Make Some Images**
+## **Make Some Images**
 * Run the quote_to_image PHP script to generate your images in the 'images' and 'nometadata' folders. This assumes you have the gd and imagick extensions available and activated and the appropriate fonts in the same folder as the script. The script is designed to run in the same folder as the quotes csv file. There are various things you can do at this point - change fonts, link the files in different ways etc.
 * The end result is you should have two folders each containing 2,300+ images. These two folders can be copied into the timelit folder so they run like .../timelit/images/nometadata.
 * When it comes to copy the timelit folder across this can be done in one step, scripts and images all together.
 * You'll need to install PHP and enable the extensions gd/imagick - this is OS dependent.
+* If this is a problem for you (because nobody got time for PHP), I have included a zipped folder with all the images and nometadata copies also.
 
 ## **Step One** - jailbreak the kindle and install appropriate software - see the sources folder for these files
 * **Jailbreak the kindle** Connect the kindle to USB, extract and copy over the jailbreak install file for the correct kindle model. Disconnect from USB, Menu -> Settings -> Update. When you reconnect to USB it will now have a linkjail folder.
