@@ -18,7 +18,7 @@ The overview is fairly simple. Jailbreak the kindle, install launchpad, install 
 * When it comes to copy the timelit folder across this can be done in one step, scripts and images all together.
 * You'll need to install PHP and enable the extensions gd/imagick - this is OS dependent.
 
-## **Step One** - jailbreak the kindle and install appropriate software
+## **Step One** - jailbreak the kindle and install appropriate software - see the sources folder for these files
 * **Jailbreak the kindle** Connect the kindle to USB, extract and copy over the jailbreak install file for the correct kindle model. Disconnect from USB, Menu -> Settings -> Update. When you reconnect to USB it will now have a linkjail folder.
 * **Install Launchapd** Same as before, copy over the appropriate launchpad files, update, restart. It will now have a launchpad folder
 * **Install usbNetwork** Same as before, copy over the appropriate usbnetwork files, update, restart. It will now have a usbnet folder.
