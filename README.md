@@ -19,11 +19,11 @@ The overview is fairly simple. Jailbreak the kindle, install launchpad, install 
 
 * **Step Two** - install the scripts for this project
 * Connect the Kindle to USB and you will see the storage on your computer available. This is /mnt/us in the linux filesystem so it's easier to copy and paste here over USb than trying to use rsync or SSH or whatever.
-*Copy and paste over the utils folder.
-*Copy and paste over the timelit folder into /mnt/us so there now exists /mnt/us/timelit/ which contains the scripts.
-*In the timelit -> conf folder rename the mac-address-here.conf file to your mac address lower case with hyphen replacing dots
-*Copy and paste over the utils folder into /mnt/us so there now exists /mnt/us/utils which contains other utility scripts
-*Copy the startclock.conf file to the /mnt/us/launchpad folder (this provides the key combo to enable SSH as well as the clock)
+* Copy and paste over the utils folder.
+* Copy and paste over the timelit folder into /mnt/us so there now exists /mnt/us/timelit/ which contains the scripts.
+* In the timelit -> conf folder rename the mac-address-here.conf file to your mac address lower case with hyphen replacing dots
+* Copy and paste over the utils folder into /mnt/us so there now exists /mnt/us/utils which contains other utility scripts
+* Copy the startclock.conf file to the /mnt/us/launchpad folder (this provides the key combo to enable SSH as well as the clock)
 
 
 
