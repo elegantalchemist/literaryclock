@@ -10,3 +10,11 @@ Repurposing a Kindle into a clock which tells time entirely through real book qu
 ## Build Instructions
 The overview is fairly simple. Jailbreak the kindle, install launchpad, install USBNetwork, install Python. Use something like USB transfer to transfer all the files to the right place and then SSH into the kindle to set a cronjob. The SSH is the hardest part by far but it's only needed for a very small part.
 
+## Credits
+* The original project instructables by tjaap - https://www.instructables.com/Literary-Clock-Made-From-E-reader/
+* Updated and modified scripts for running it by knobunc - https://github.com/knobunc/kindle-clock
+* Hugely expanded list of quotes from JohannesNE - https://github.com/JohannesNE/literature-clock
+* Original project ideas and crowdsourced quotes - the Guardian - http://litclock.mohawkhq.com/
+
+## NSFW Warning
+A number of the literary quotes contain NSFW language. I have little to no interest in filtering them out and they remain here unredacted. If you wanted to you could do a ctrl+f search and replace for common profanity through the quotes.
