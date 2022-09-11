@@ -26,13 +26,12 @@ The overview is fairly simple. Jailbreak the kindle, install launchpad, install 
 
 
 ## **Step Two** - install the scripts for this project
-* Connect the Kindle to USB and you will see the storage on your computer available. This is /mnt/us in the linux filesystem so it's easier to copy and paste here over USb than trying to use rsync or SSH or whatever.
-* Copy and paste over the utils folder.
+* Connect the Kindle to USB and you will see the storage on your computer available. This is /mnt/us/ in the linux filesystem so it's easier to copy and paste here over USb than trying to use rsync or SSH or whatever.
 * Copy and paste over the timelit folder into /mnt/us so there now exists /mnt/us/timelit/ which contains the scripts, plus the images in their approproate place
 * In the timelit -> conf folder rename the mac-address-here.conf file to your mac address lower case with hyphen replacing dots
-* Copy and paste over the utils folder into /mnt/us so there now exists /mnt/us/utils which contains other utility scripts
-* Copy the startclock.conf file to the /mnt/us/launchpad folder (this provides the key combo to enable SSH as well as the clock)
-* Activate SSH over wifi by editing config in /mnt/us/usbnet/etc to turn 'allow ssh over wifi' to true.
+* Copy and paste over the utils folder into /mnt/us/ so there now exists /mnt/us/utils which contains other utility scripts
+* Copy the startclock.conf file to the existing /mnt/us/launchpad folder (this provides the key combo to enable SSH as well as the clock)
+* Activate SSH over wifi by editing 'config' file in /mnt/us/usbnet/etc to turn 'allow ssh over wifi' to true. You can also update the kindle's local IP address expectations here, although I'm not sure if this is necessary for SSH over WiFi.
 * All of the above can be done over USB in windows (and presumably linux) as the 'external' storage is /mnt/us/
 * Restart the kindle (settings -> menu -> settings -> restart). This is needed to get the key combinations activated in launchpad.
 * Now if you select Shift, then n on the keypad (press shift, let go, press n) the message 'success' should pop up and networking is turned on to allow SSH connections. If this doesn't work then the tedious way is to use the kindle search function and search for ';debugOn' then '~usbNetwork' then ';debugOff' (without quotes but with tilde/semicolon) and this will turn SSH access on.
@@ -55,7 +54,9 @@ reboot
 ```
 
 * This should be total extent of SSH/terminal needed - adding timelit.sh to a one minute cronjob
-* Once the kindle has rebooted, shift (and release) and C should start the clock.
+* Once the kindle has rebooted and given a minute to be fully running, shift (and release) and C should start the clock.
+* This project disables the metadata function so no buttons at all should affect the clock running. If the battery runs out, charging it will put it right back in clock mode.
+Shift (and release) and C while the clock is running will reboot the kindle out of clock mode and back to normal mode - perfectly usable as a normal kindle with books all kept where they are - this whole project is non-destructive to your Kindle.
 
 ## Credits
 * The original project instructables by tjaap - https://www.instructables.com/Literary-Clock-Made-From-E-reader/
