@@ -1,4 +1,4 @@
 
-These folders are where the images and images with metadata go
+These folders are where the images with no metadata get put.
 
-As discuss, I just put the metadata images in both places because I don't want a quiz
+You can delete the contents of this folder before transferring over if you prefer to save space.
