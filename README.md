@@ -5,7 +5,7 @@ Non-destructive, the clock can be exited and the Kindle used as normal at any po
 
 Every time is from a real book quote and the current selection of quotes runs to slightly over 2300+ times for the 1440 minutes of a day. Every quote has the time preserved in it's original written format which means times can vary from 24h clock (1315h) to written format (twenty and seven past three). There are still a number of times still missing and some quotes are vague enough to be used to fill in some gaps.
 
-<img src="https://github.com/elegantalchemist/literaryclock/blob/main/images/literaryclockrunning.jpg" height="600">
+<p style="text-align:center;"><img src="https://github.com/elegantalchemist/literaryclock/blob/main/images/literaryclockrunning.jpg" height="600"></p>
 
 ## Materials
 * **Kindle 3 Keyboard** (I think this can be run on multiple models but I haven't explored this yet - I have touch and non--touch to try out)
