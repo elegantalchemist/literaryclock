@@ -69,6 +69,11 @@ reboot
 * This project disables the metadata function so no buttons at all should affect the clock running. If the battery runs out, charging it will put it right back in clock mode.
 * Shift (and release) and C while the clock is running will reboot the kindle out of clock mode and back to normal mode - perfectly usable as a normal kindle with books all kept where they are - this whole project is non-destructive to your Kindle.
 
+## Uninstall
+* All of the source files also have 'uninstall' variants to remove them from the Kindle if you wished to take it right back to the start.
+* Delete all the folders and files you created yourself (but not the ones created by the updates like usbnet, python etc)
+* Copy across the uninstall variants of each update one at a time and apply as an update, python, usbnet, launchapd, jailbreak.
+
 ## Credits
 * The original project instructables by tjaap - https://www.instructables.com/Literary-Clock-Made-From-E-reader/
 * Updated and modified scripts for running it by knobunc - https://github.com/knobunc/kindle-clock
