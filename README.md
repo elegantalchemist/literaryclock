@@ -40,13 +40,14 @@ The SSH is the hardest part by far but it's only needed for a small part
 * Connect the Kindle to USB and you will see the storage on your computer available. This is /mnt/us/ in the linux filesystem so it's easier to copy and paste here over USB than trying to use rsync or SSH or whatever.
 * Copy and paste over the timelit folder into /mnt/us so there now exists /mnt/us/timelit/ which contains the scripts, plus the images in their appropriate place /mnt/us/timelit/images/nometadata
 * In the timelit -> conf folder rename the mac-address-here.conf file to your mac address lower case with hyphen replacing dots
+* In the timelit -> conf folder, edit the mac-address-here.conf file as required to show time in the correct timezone. Ex: GMT0BST -> AST4ADT. Timezone formats can be referenced from here: https://mm.icann.org/pipermail/tz/2001-April/011541.html
 * Copy and paste over the utils folder into /mnt/us/ so there now exists /mnt/us/utils which contains other utility scripts
-* Copy the startClock.conf file to the existing /mnt/us/launchpad folder (this provides the key combo to enable SSH as well as the clock)
+* Copy the startClock.ini file to the existing /mnt/us/launchpad folder (this provides the key combo to enable SSH as well as the clock)
 * Activate SSH over wifi by editing 'config' file in /mnt/us/usbnet/etc to turn 'allow ssh over wifi' to true. You can also update the kindle's local IP address expectations here, although I'm not sure if this is necessary for SSH over WiFi.
 * All of the above can be done over USB in windows (and presumably linux) as the 'external' storage visible when you plug in just like a USB stick is /mnt/us/
 * Restart the kindle (settings -> menu -> settings -> restart). This is needed to get the key combinations activated in launchpad.
 * Now if you select Shift, then N on the keypad (press shift, let go, press n) the message 'success' should pop up and networking is turned on to allow SSH connections. If this doesn't work then the tedious way is to use the kindle search function and search for ';debugOn' then '~usbNetwork' then ';debugOff' (without quotes but with tilde/semicolon) and this will turn SSH access on.
-* SSH into your kindle - I prefer PuTTY (get the IP of the Kindle from your router, user is root, password can be found using the serial number here: https://www.sven.de/kindle/?# or use the python script included in sources here - may need to try all 4 to get one which works)
+* SSH into your kindle - I prefer PuTTY (get the IP of the Kindle from your router (default will try to be 192.168.2.2, see /mnt/us/usbnet/etc/config), user is root, password can be found using the serial number here: https://www.sven.de/kindle/?# or use the python script included in sources here - may need to try all 4 to get one which works)
 * Mount the root storage as read-write, then edit the crontab to add a cronjob, something like the below instruction set
 
 ```
@@ -57,7 +58,7 @@ nano /etc/crontab/root
 ctrl+x then yes to save
 
 (then the following functions to add the cleanup clockisticking file function)
-cp /mnt/us/utils/clean-clock /etc/init.d/
+cp /mnt/us/utils/clean-clock.sh /etc/init.d/clean-clock
 cd /etc/rcS.d
 ln -s ../init.d/clean-clock S77clean-clock
 mntroot ro
