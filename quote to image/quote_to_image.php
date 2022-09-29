@@ -19,7 +19,7 @@ $creditFont = './baskervilleboldbt.ttf';
 
 // get the quotes (including title and author) from a CSV file, 
 // and create unique images for them, one without and one with title and author
-$row = 1;
+$row = 0;
 if (($handle = fopen("litclock_annotated_br2.csv", "r")) !== FALSE) {
     while (($data = fgetcsv($handle, 1000, "|")) !== FALSE) {
         $num = count($data);
@@ -30,8 +30,11 @@ if (($handle = fopen("litclock_annotated_br2.csv", "r")) !== FALSE) {
         $title = trim($data[3]);
         $author = trim($data[4]);
 
-        // if ($row < 10)
-        TurnQuoteIntoImage($time, $quote, $timestring, $title, $author);
+        // skip header
+        if ($row > 1)
+        {
+            TurnQuoteIntoImage($time, $quote, $timestring, $title, $author);
+        }
 
     }
     fclose($handle);
