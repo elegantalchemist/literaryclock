@@ -9,18 +9,18 @@ except ModuleNotFoundError:
     exit(1)
 
 # options (these are constants)
-csvpath = 'litclock_annotated_br2.csv'
-imgdir = 'images/'
-imgformat = 'png'       # jpeg is faster but lossy
-include_metadata = True # whether to include author and title name
-imgsize = (600,800)     # width/height
-color_bg = 255          # white
-color_norm = 125        # grey
-color_high = 0          # black
-fntname_norm = 'bookerly.ttf'
-fntname_high = 'bookerlybold.ttf'
-fntname_mdata = 'baskervilleboldbt.ttf'
-fntsize_mdata = 25
+csvpath = 'litclock_annotated_br2.csv'      # csv file to read quotes from
+imgdir = 'images/'                          # save location for images
+imgformat = 'png'                           # format. jpeg is faster but lossy
+include_metadata = True                     # whether to include author/title
+imgsize = (600,800)                         # width/height of image
+color_bg = 255                              # white. color for the background
+color_norm = 125                            # grey. color for normal text
+color_high = 0                              # black. color for highlighted text
+fntname_norm = 'bookerly.ttf'               # font for normal text
+fntname_high = 'bookerlybold.ttf'           # font for highlighted text
+fntname_mdata = 'baskervilleboldbt.ttf'     # font for the author/title
+fntsize_mdata = 25                          # fontsize for the author/title
 # don't touch
 imgnumber = 0
 previoustime = ''
