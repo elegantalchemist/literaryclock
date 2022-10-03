@@ -217,12 +217,11 @@ def calc_fntsize(length:int, height:int, text:str, fntname:str, basesize=50,
 def main():
     hardworker = ' /ᐠ - ˕ -マ Ⳋ'
     with open(csvpath, newline='\n', encoding="utf8") as csvfile:
-        # if number is passed as an argument, only process count items
+        jobs = len(csvfile.readlines()) - 1
+        csvfile.seek(0)
         if len(argv) > 1:
-            jobs = int(argv[1])
-        else:
-            jobs = len(csvfile.readlines()) - 1
-            csvfile.seek(0)
+            if argv[1].isdigit() and int(argv[1]) < jobs:
+                jobs = int(argv[1])
         quotereader = csv.DictReader(csvfile, delimiter='|')
         for i, row in enumerate(quotereader):
             if i >= jobs:
@@ -232,13 +231,12 @@ def main():
                 row['timestring'], row['author'], row['title'])
             progressbar = f'{hardworker} working.... {i+1}/{jobs}'
             print(progressbar, end='\r', flush=True)
+    print("")
 
 
-# only run the script if invoked directly
 if __name__ == '__main__':
     try:
         main()
-        print("")
     except KeyboardInterrupt:
         print("\nI hate work")
         exit(0)
