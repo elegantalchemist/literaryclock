@@ -34,7 +34,7 @@ def TurnQuoteIntoImage(index:int, time:str, quote:str, timestring:str,
     quotelength = 570
     quotestart_y = 0
     quotestart_x = 20
-    mdatalength = 500
+    mdatalength = 450
     mdatastart_y = 785
     mdatastart_x = 585
 
@@ -44,7 +44,7 @@ def TurnQuoteIntoImage(index:int, time:str, quote:str, timestring:str,
 
     # draw the title and author name
     if include_metadata:
-        font_mdata = ImageFont.FreeTypeFont(fntname_mdata, fntsize_mdata)
+        font_mdata = create_fnt(fntname_mdata, fntsize_mdata)
         metadata = f'—{title.strip()}, {author.strip()}'
         # wrap lines into a reasonable length and lower the maximum height the
         # quote can occupy according to the number of lines the credits use
@@ -63,8 +63,8 @@ def TurnQuoteIntoImage(index:int, time:str, quote:str, timestring:str,
 
     # draw the quote (pretty)
     quote, fntsize = calc_fntsize(quotelength, quoteheight, quote, fntname_high)
-    font_norm = ImageFont.FreeTypeFont(fntname_norm, fntsize)
-    font_high = ImageFont.FreeTypeFont(fntname_high, fntsize)
+    font_norm = create_fnt(fntname_norm, fntsize)
+    font_high = create_fnt(fntname_high, fntsize)
     try:
         draw_quote(ariandel, (quotestart_x,quotestart_y), quote,
                                 timestring, font_norm, font_high)
@@ -88,9 +88,9 @@ def TurnQuoteIntoImage(index:int, time:str, quote:str, timestring:str,
 
 
 def draw_quote(drawobj, anchors:tuple, text:str, substr:str,
-        font_norm:ImageFont.FreeTypeFont, font_high:ImageFont.FreeTypeFont):
-    # all this function does is add text to the drawobj with the substr
-    # highlighted. it doesn't check if it will fit the image or anything else
+        font_norm:ImageFont.truetype, font_high:ImageFont.truetype):
+    # draws text with substr highlighted. doesn't check if it will fit the
+    # image or anything else
     start_x = anchors[0]
     start_y = anchors[1]
 
@@ -157,7 +157,7 @@ def draw_quote(drawobj, anchors:tuple, text:str, substr:str,
         x = start_x
 
 
-def wrap_lines(text:str, font:ImageFont.FreeTypeFont, line_length:int):
+def wrap_lines(text:str, font:ImageFont.truetype, line_length:int):
     # wraps lines to maximize the number of words within line_length. note
     # that lines *can* exceed line_length, this is intentional, as text looks
     # better if the font is rescaled afterwards. adapted from Chris Collett
@@ -179,7 +179,6 @@ def calc_fntsize(length:int, height:int, text:str, fntname:str, basesize=50,
     # manually setting basesize to just below the mean of a sample will
     # massively reduce processing time with large batches of text, at the risk
     # of potentially wasting it with strings much larger than the mean
-    # returns wrapped text and fontsize, doesn't actually draw anything
 
     # these are just for calculating the textbox size, they're discarded
     louvre = Image.new(mode='1', size=(0,0))
@@ -187,7 +186,7 @@ def calc_fntsize(length:int, height:int, text:str, fntname:str, basesize=50,
 
     lines = ''
     fntsize = basesize
-    fnt = ImageFont.truetype(fntname, fntsize)
+    fnt = create_fnt(fntname, fntsize)
     boxheight = 0
     while not boxheight > height and not fntsize > maxsize:
         fntsize += 1
@@ -212,6 +211,13 @@ def calc_fntsize(length:int, height:int, text:str, fntname:str, basesize=50,
     if boxheight > height:
         return calc_fntsize(length, height, text, fntname, basesize-5)
     return lines, fntsize
+
+
+def create_fnt(name:str, size:int, layout_engine=ImageFont.Layout.BASIC):
+    # Layout.BASIC is orders of magnitude faster than RAQM but will struggle
+    # with RTL languages
+    # see https://github.com/python-pillow/Pillow/issues/6631
+    return ImageFont.truetype(name, size, layout_engine=layout_engine)
 
 
 def main():
