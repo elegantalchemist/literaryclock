@@ -22,3 +22,6 @@ Fonts can also be changed in this manner, simply add a new truetype font to this
 If you only want to generate x images (say, for testing how a font or a quote looks), you can pass a number as an argument to the script — `python3 quote_to_image.py 5` will only process the first 5 lines in the csv file (excluding the header).
 
 [^1]: Python is preinstalled on virtually every Linux distribution and MacOS, in which case you only need to install Pillow.
+
+## Using PHP
+The older setup for this section was the PHP file enclosed here. Same thing - you need to fonts and the csv file in the same folder and just run the PHP file. But be warned you need to activate Imagick and GP extensions and double check font locations, csv file name inside the PHP file etc. The PHP file also needs the /images/nometadata or whatever folders created for it as it doesn't have permission to do it by itself. 
