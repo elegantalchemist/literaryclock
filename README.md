@@ -33,7 +33,7 @@ The SSH is the hardest part by far but it's only needed for a small part
 
 ## **Step 2** - Jailbreak the kindle and install appropriate software - see the sources folder for these files
 * **Optional but useful** Update the kindle amazon firmware to the newest, this helps with time and date setting in the background. Firmwares available here pay attention to your serial number https://www.amazon.com/gp/help/customer/display.html?nodeId=GX3VVAQS4DYDE5KE
-* **Jailbreak the kindle** Connect the kindle to USB, extract and copy over the jailbreak install file (directly to the root of the visible USB storage section, not into any folders) for the correct kindle model. Disconnect from USB, Menu -> Settings -> Menu -> Update. When you reconnect to USB it will now have a linkjail folder.
+* **Jailbreak the kindle** Connect the kindle to USB, extract and copy over the jailbreak install file (directly to the root of the visible USB storage section, not into any folders) for the correct kindle model. Disconnect from USB, Menu -> Settings -> Menu -> Update. When you reconnect to USB it will now have a linkjail folder. Find your code for the jailbreak files herr: https://wiki.mobileread.com/wiki/Kindle_Serial_Numbers
 * **Install Launchapd** Same as before, copy over the appropriate launchpad files, update, restart. It will now have a launchpad folder
 * **Install usbNetwork** Same as before, copy over the appropriate usbnetwork files, update, restart. It will now have a usbnet folder.
 * **Install Python** Same as before, copy over the appropriate python files, update, restart. It will now have a python folder.
