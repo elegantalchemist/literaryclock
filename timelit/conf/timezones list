@@ -1,0 +1,1013 @@
+
+List of time zones compliant both for Linux, Solaris 5.8, OSF1 Tru64, HP-UX
+francois reygagne freygagne at opteway.com
+Fri Apr 13 16:48:19 UTC 2001
+
+    Previous message: Time Lord
+    Next message: List of time zones compliant both for Linux, Solaris 5.8, OSF1 Tru64, HP-UX
+    Messages sorted by: [ date ] [ thread ] [ subject ] [ author ]
+
+I need if possible the same timezone lists for the platforms listed
+bellow
+Linux, Solaris 5.8, OSF1 Tru64, HP-UX  to make portable the handling
+of timezones. I'm afraid when i took a look to the differents unix os
+flavors
+the timezone strings are not the same according to the targetted
+platforms.
+
+I discovered the timezones defined by Solaris is only the single as the
+OLSON data.
+I'm wondering if it could be possible to use the OLSON data and code
+instead
+the specific target OS stuff. This could be very convenient and resolve
+my problem
+of porting. If the answer is Yes, How could we use OLSON data and code
+for each
+paltforms. Is there an installation guide to override the default
+platform timezone stuff.
+
+If the response is No, how to make an association code between the
+different timezones list.
+
+Please enclosed here after the timezone lists for each platform:
+
+============================================================
+HP-UX
+# @(#) $Revision: 80.4.1.6 $
+
+# Mitteleuropaeische Zeit, Mitteleuropaeische Sommerzeit
+MEZ-1MESZ
+0 3 25-31 3  1983-2038 0   MESZ-2
+0 2 24-30 9  1983-1995 0   MEZ-1
+0 2 25-31 10 1996-2038 0   MEZ-1
+
+# Middle European Time, Middle European Time Daylight Savings Time
+MET-1METDST
+0 3 25-31 3  1983-2038 0   METDST-2
+0 2 24-30 9  1983-1995 0   MET-1
+0 2 25-31 10 1996-2038 0   MET-1
+
+# Greenwich Mean Time, British Summer Time
+GMT0BST
+0 3 25-31 3  1983-1984 0   BST-1
+0 3 23-29 3  1985-1990 0   BST-1
+0 3 25-31 3  1991-1995 0   BST-1
+0 2 25-31 3  1996-2038 0   BST-1
+0 1 25-31 10 1983-1985 0   GMT0
+0 1 23-29 10 1986-1994 0   GMT0
+0 1 18-24 10 1995      0   GMT0
+0 1 25-31 10 1996-2038 0   GMT0
+
+# Pacific Standard Time, Pacific Daylight Time
+PST8PDT
+0 3 24-30 4  1970-1973 0   PDT7
+0 3 6     1  1974      0-6 PDT7
+0 3 22-28 2  1975      0   PDT7
+0 3 24-30 4  1976-1986 0   PDT7
+0 3 1-7   4  1987-2038 0   PDT7
+0 1 25-31 10 1970-1973 0   PST8
+0 1 24-30 11 1974      0   PST8
+0 1 25-31 10 1975-2038 0   PST8
+
+# Eastern Standard Time, Eastern Daylight Time
+EST5EDT
+0 3 24-30 4  1970-1973 0   EDT4
+0 3 6     1  1974      0-6 EDT4
+0 3 22-28 2  1975      0   EDT4
+0 3 24-30 4  1976-1986 0   EDT4
+0 3 1-7   4  1987-2038 0   EDT4
+0 1 25-31 10 1970-1973 0   EST5
+0 1 24-30 11 1974      0   EST5
+0 1 25-31 10 1975-2038 0   EST5
+
+# Central Standard Time, Central Daylight Time
+CST6CDT
+0 3 24-30 4  1970-1973 0   CDT5
+0 3 6     1  1974      0-6 CDT5
+0 3 22-28 2  1975      0   CDT5
+0 3 24-30 4  1976-1986 0   CDT5
+0 3 1-7   4  1987-2038 0   CDT5
+0 1 25-31 10 1970-1973 0   CST6
+0 1 24-30 11 1974      0   CST6
+0 1 25-31 10 1975-2038 0   CST6
+
+# Mountain Standard Time, Mountain Daylight Time
+MST7MDT
+0 3 24-30 4  1970-1973 0   MDT6
+0 3 6     1  1974      0-6 MDT6
+0 3 22-28 2  1975      0   MDT6
+0 3 24-30 4  1976-1986 0   MDT6
+0 3 1-7   4  1987-2038 0   MDT6
+0 1 25-31 10 1970-1973 0   MST7
+0 1 24-30 11 1974      0   MST7
+0 1 25-31 10 1975-2038 0   MST7
+
+# Atlantic Standard Time, Atlantic Daylight Time
+AST4ADT
+0 3 24-30 4  1970-1973 0   ADT3
+0 3 6     1  1974      0-6 ADT3
+0 3 22-28 2  1975      0   ADT3
+0 3 24-30 4  1976-1986 0   ADT3
+0 3 1-7   4  1987-2038 0   ADT3
+0 1 25-31 10 1970-1973 0   AST4
+0 1 24-30 11 1974      0   AST4
+0 1 25-31 10 1975-2038 0   AST4
+
+# Newfoundland Standard Time, Newfoundland Daylight Time
+NST3:30NDT
+0 3 24-30 4  1970-1973 0   NDT2:30
+0 3 6     1  1974      0-6 NDT2:30
+0 3 22-28 2  1975      0   NDT2:30
+0 3 24-30 4  1976-1986 0   NDT2:30
+0 3 1-7   4  1987-2038 0   NDT2:30
+0 1 25-31 10 1970-1973 0   NST3:30
+0 1 24-30 11 1974      0   NST3:30
+0 1 25-31 10 1975-2038 0   NST3:30
+
+# Eastern Standard Time, Central Daylight Time (US: Indiana)
+EST5CDT
+0 3 24-30 4  1970-1973 0   CDT5
+0 3 6     1  1974      0-6 CDT5
+0 3 22-28 2  1975      0   CDT5
+0 3 24-30 4  1976-1986 0   CDT5
+0 3 1-7   4  1987-2038 0   CDT5
+0 1 25-31 10 1970-1973 0   EST5
+0 1 24-30 11 1974      0   EST5
+0 1 25-31 10 1975-2038 0   EST5
+
+# Aleutian Standard Time, Aleutian Daylight Time
+AST10ADT
+0 3 24-30 4  1970-1973 0   ADT9
+0 3 6     1  1974      0-6 ADT9
+0 3 22-28 2  1975      0   ADT9
+0 3 24-30 4  1976-1986 0   ADT9
+0 3 1-7   4  1987-2038 0   ADT9
+0 1 25-31 10 1970-1973 0   AST10
+0 1 24-30 11 1974      0   AST10
+0 1 25-31 10 1975-2038 0   AST10
+
+# Yukon Standard Time, Yukon Daylight Time
+YST9YDT
+0 3 24-30 4  1970-1973 0   YDT8
+0 3 6     1  1974      0-6 YDT8
+0 3 22-28 2  1975      0   YDT8
+0 3 24-30 4  1976-1986 0   YDT8
+0 3 1-7   4  1987-2038 0   YDT8
+0 1 25-31 10 1970-1973 0   YST9
+0 1 24-30 11 1974      0   YST9
+0 1 25-31 10 1975-2038 0   YST9
+
+# Western European Time, Western European Time Daylight Savings Time
+WET0WETDST
+0 3 25-31 3  1983-1984 0   WETDST-1
+0 3 23-29 3  1985-1995 0   WETDST-1
+0 2 25-31 3  1996-2038 0   WETDST-1
+0 1 25-31 10 1983-1985 0   WET0
+0 1 23-29 10 1986-1995 0   WET0
+0 1 25-31 10 1996-2038 0   WET0
+
+# Portuguese Winter Time, Portuguese Summer Time
+PWT0PST
+0 2 25-31 3  1983-2038 0   PST-1
+0 1 25-31 10 1983-2038 0   PWT0
+
+# South Africa Standard Time
+SAST-2
+0 1 1-7   3  1985-2038 0   SAST-2
+
+# Australian Central Standard Time, Australian Central Daylight Time
+# (South Australia)
+#
+# This entry has been changed to allow for a later ending of
+# daylight savings time from 1995 onwards in South Australia.
+# It now ends in the last week of March.
+#
+CST-9:30CDT
+0 3 25-31 10 1971-2038 0   CDT-10:30
+0 1 27    2  1972      0-6 CST-9:30
+0 1 1-7   3  1973-1994 0   CST-9:30
+0 2 25-31 3  1995-2038 0   CST-9:30
+
+# Australian Eastern Standard Time, Australian Eastern Daylight Time
+#
+# This entry has been changed to allow for a later ending of
+# daylight savings time from 1996 onwards.
+# It now ends in the last week of March.
+#
+EST-10EDT
+0 3 25-31 10 1971-2038 0   EDT-11
+0 1 27    2  1972      0-6 EST-10
+0 1 1-7   3  1973-1985 0   EST-10
+0 1 15-21 3  1986      0   EST-10
+0 1 1-7   3  1987-1995 0   EST-10
+0 2 25-31 3  1996-2038 0   EST-10
+
+# New Zealand Standard Time, New Zealand Daylight Time
+#
+NZST-12NZDT
+0 3 25-31 10 1985-1988 0   NZDT-13
+0 3 8     10 1989      0-6 NZDT-13
+0 3 1-7   10 1990-2038 0   NZDT-13
+0 1 1-7   3  1985-1989 0   NZST-12
+0 1 15-21 3  1990-2038 0   NZST-12
+
+# Pacific Standard Time, Pacific Daylight Time (for Malaysia or
+Singapore)
+#
+PST-8PDT
+0 1 1-7   4  1996-2038 0   PDT-9
+0 1 25-31 10 1996-2038 0   PST-8
+
+# Finland Standard Time, Finland Daylight Time
+#
+EET-2EETDST
+0 3 25-31 3  1981-2038 0   EETDST-3
+0 4 24-30 9  1981-2038 0   EET-2
+
+# The timezones named above should be used in preference to those below
+except
+# for dates prior to 1987 for Tasmania.  US and Canada use the same
+rules so
+# the simpler timezone strings above will work for both countries.
+
+# Australian Eastern Standard Time, Australian Eastern Daylight Time
+(Tasmania)
+# (same as EST-10EDT for 1987 - 2038)
+#
+# This entry has been changed to allow for an earlier starting
+# and later ending of daylight savings time from 1995 onwards
+# in Tasmania.  It starts in the first week of October and
+# ends in the last week of March.
+EST-10EDT#Tasmania
+0 3 25-31 10 1971-1994 0   EDT#Tasmania-11
+0 3 1-7   10 1995-2038 0   EDT#Tasmania-11
+0 1 27    2  1972      0-6 EST-10
+0 1 1-7   3  1973-1994 0   EST-10
+0 1 25-31 3  1995-2038 0   EST-10
+
+# Australian Eastern Standard Time, Australian Eastern Daylight Time
+#
+# This entry has been changed to allow for a later ending of
+# daylight savings time from 1996 onwards.
+# It now ends in the last week of March.
+# (New South Wales)
+EST-10EDT#NSW
+0 3 25-31 10 1971-2038 0   EDT#NSW-11
+0 1 27    2  1972      0-6 EST-10
+0 1 1-7   3  1973-1985 0   EST-10
+0 1 15-21 3  1986      0   EST-10
+0 2 1-7   3  1987-1995 0   EST-10
+0 2 25-31 3  1996-2038 0   EST-10
+
+# Australian Eastern Standard Time, Australian Eastern Daylight Time
+#
+# This entry has been changed to allow for a later ending of
+# daylight savings time from 1995 onwards.
+# It now ends in the last week of March.
+# (Victoria)
+EST-10EDT#VIC
+0 3 25-31 10 1971-2038 0   EDT#VIC-11
+0 1 27    2  1972      0-6 EST-10
+0 1 1-7   3  1973-1985 0   EST-10
+0 1 15-21 3  1986      0   EST-10
+0 1 1-7   3  1987-1994 0   EST-10
+0 2 25-31 3  1995-2038 0   EST-10
+
+# Pacific Standard Time, Pacific Daylight Time (Canada)
+PST8PDT#Canada
+0 3 24-30 4  1970-1973 0   PDT#Canada7
+0 3 6     1  1974      0-6 PDT#Canada7
+0 3 22-28 2  1975      0   PDT#Canada7
+0 3 24-30 4  1976-1986 0   PDT#Canada7
+0 3 1-7   4  1987-2038 0   PDT#Canada7
+0 1 25-31 10 1970-1973 0   PST8
+0 1 24-30 11 1974      0   PST8
+0 1 25-31 10 1975-2038 0   PST8
+
+# Mountain Standard Time, Mountain Daylight Time (Canada)
+MST7MDT#Canada
+0 3 24-30 4  1970-1973 0   MDT#Canada6
+0 3 6     1  1974      0-6 MDT#Canada6
+0 3 22-28 2  1975      0   MDT#Canada6
+0 3 24-30 4  1976-1986 0   MDT#Canada6
+0 3 1-7   4  1987-2038 0   MDT#Canada6
+0 1 25-31 10 1970-1973 0   MST7
+0 1 24-30 11 1974      0   MST7
+0 1 25-31 10 1975-2038 0   MST7
+
+# Central Standard Time, Central Daylight Time (Canada)
+CST6CDT#Canada
+0 3 24-30 4  1970-1973 0   CDT#Canada5
+0 3 6     1  1974      0-6 CDT#Canada5
+0 3 22-28 2  1975      0   CDT#Canada5
+0 3 24-30 4  1976-1986 0   CDT#Canada5
+0 3 1-7   4  1987-2038 0   CDT#Canada5
+0 1 25-31 10 1970-1973 0   CST6
+0 1 24-30 11 1974      0   CST6
+0 1 25-31 10 1975-2038 0   CST6
+
+# Eastern Standard Time, Eastern Daylight Time (Canada)
+EST5EDT#Canada
+0 3 24-30 4  1970-1973 0   EDT#Canada4
+0 3 6     1  1974      0-6 EDT#Canada4
+0 3 22-28 2  1975      0   EDT#Canada4
+0 3 24-30 4  1976-1986 0   EDT#Canada4
+0 3 1-7   4  1987-2038 0   EDT#Canada4
+0 1 25-31 10 1970-1973 0   EST5
+0 1 24-30 11 1974      0   EST5
+0 1 25-31 10 1975-2038 0   EST5
+
+# Eastern Standard Time (US: Most of Indiana)
+#
+# This entry is added to correct the Indiana timezone because
+# Indiana does not observe Daylight Savings Time.  The original
+# entry EST5CDT is kept to ensure backward compatibility.
+EST5EST
+0 3 24-30 4  1970-1973 0   EST5
+0 3 6     1  1974      0-6 EST5
+0 3 22-28 2  1975      0   EST5
+0 3 24-30 4  1976-1986 0   EST5
+0 3 1-7   4  1987-2038 0   EST5
+0 1 25-31 10 1970-1973 0   EST5
+0 1 24-30 11 1974      0   EST5
+0 1 25-31 10 1975-2038 0   EST5
+
+# Eastern Standard Time, Central Daylight Time (US: Indiana)
+#
+# This entry is for backward compatibility only, the correct entry
+# is the EST5CDT entry above.  This entry is incorrect because the
+# "6" in EST6CDT below should be a "5".  Other than the "6" being
+# changed to "5", this entry and EST5CDT are the same and the
+# end result of using either is identical.
+#
+EST6CDT
+0 3 24-30 4  1970-1973 0   CDT5
+0 3 6     1  1974      0-6 CDT5
+0 3 22-28 2  1975      0   CDT5
+0 3 24-30 4  1976-1986 0   CDT5
+0 3 1-7   4  1987-2038 0   CDT5
+0 1 25-31 10 1970-1973 0   EST5
+0 1 24-30 11 1974      0   EST5
+0 1 25-31 10 1975-2038 0   EST5
+
+# Western Russia (Moscow) Time, Western Russia (Moscow) Daylight Savings
+
+# Time
+WST-3WSTDST
+0 3 25-31 3  1983-2038 0   WSTDST-4
+0 2 24-30 9  1983-1995 0   WST-3
+0 2 25-31 10 1996-2038 0   WST-3
+
+# Belorussia (minsk) Time, Belorussia (minsk) Daylight Savings Time
+
+WST-2WSTDST
+0 3 25-31 3  1983-2038 0   WSTDST-3
+0 2 24-30 9  1983-1995 0   WST-2
+0 2 25-31 10 1996-2038 0   WST-2
+
+# European Russia (samara) Time, European Russia (samara) Daylight
+Savings
+#Time
+
+WST-4WSTDST
+0 3 25-31 3  1983-2038 0   WSTDST-5
+0 2 24-30 9  1983-1995 0   WST-4
+0 2 25-31 10 1996-2038 0   WST-4
+
+# Urals (Ekaterinburg) Time, Urals (Ekaterinburg) Daylight Savings Time
+
+WST-5WSTDST
+0 3 25-31 3  1983-2038 0   WSTDST-6
+0 2 24-30 9  1983-1995 0   WST-5
+0 2 25-31 10 1996-2038 0   WST-5
+
+# Western Siberia (Omsk), Western Siberia (Omsk) Daylight Savings Time
+
+WST-6WSTDST
+0 3 25-31 3  1983-2038 0   WSTDST-7
+0 2 24-30 9  1983-1995 0   WST-6
+0 2 25-31 10 1996-2038 0   WST-6
+
+# Middle Siberia (Krasnoyarsk) Time, Middle Siberia (Krasnoyarsk)
+# Daylight Savings Time
+
+WST-7WSTDST
+0 3 25-31 3  1983-2038 0   WSTDST-8
+0 2 24-30 9  1983-1995 0   WST-7
+0 2 25-31 10 1996-2038 0   WST-7
+
+# Baikal lake (Irkutsk) Time, Baikal lake (Irkutsk) Daylight Savings
+Time
+
+WST-8WSTDST
+0 3 25-31 3  1983-2038 0   WSTDST-9
+0 2 24-30 9  1983-1995 0   WST-8
+0 2 25-31 10 1996-2038 0   WST-8
+
+# Eastern Siberia (Yakutsk) Time, Eastern Siberia (Yakutsk) Daylight
+# Savings Time
+
+WST-9WSTDST
+0 3 25-31 3  1983-2038 0   WSTDST-10
+0 2 24-30 9  1983-1995 0   WST-9
+0 2 25-31 10 1996-2038 0   WST-9
+
+# Far East (Khabarovsk) Time, Far East (Khabarovsk) Daylight Savings
+# Time
+
+WST-10WSTDST
+0 3 25-31 3  1983-2038 0   WSTDST-11
+0 2 24-30 9  1983-1995 0   WST-10
+0 2 25-31 10 1996-2038 0   WST-10
+
+# Russia Pacific (magadan) Time, Russia Pacific (magadan) Daylight
+# Savings Time
+
+WST-11WSTDST
+0 3 25-31 3  1983-2038 0   WSTDST-12
+0 2 24-30 9  1983-1995 0   WST-11
+0 2 25-31 10 1996-2038 0   WST-11
+
+# Kamchatka (Petropavlovsk-Kamchatskiy) Time, Kamchatka(Petropavlovsk
+# -Kamchatskiy) Daylight Savings Time
+
+WST-12WSTDST
+0 3 25-31 3  1983-2038 0   WSTDST-13
+0 2 24-30 9  1983-1995 0   WST-12
+0 2 25-31 10 1996-2038 0   WST-12
+__________________________________________________________________________
+
+Solaris 5.8
+2 ./Australia/Broken_Hill
+2 ./Australia/LHI
+2 ./Australia/NSW
+2 ./Australia/North
+2 ./Australia/Queensland
+2 ./Australia/South
+2 ./Australia/Tasmania
+2 ./Australia/Victoria
+2 ./Australia/West
+20 ./Australia
+2 ./Brazil/Acre
+2 ./Brazil/DeNoronha
+2 ./Brazil/East
+2 ./Brazil/West
+10 ./Brazil
+4 ./Canada/Atlantic
+2 ./Canada/Central
+2 ./Canada/East-Saskatchewan
+4 ./Canada/Eastern
+2 ./Canada/Mountain
+4 ./Canada/Newfoundland
+2 ./Canada/Pacific
+2 ./Canada/Yukon
+24 ./Canada
+2 ./Chile/Continental
+2 ./Chile/EasterIsland
+6 ./Chile
+2 ./Etc/GMT
+2 ./Etc/GMT+1
+2 ./Etc/GMT+10
+2 ./Etc/GMT+11
+2 ./Etc/GMT+12
+2 ./Etc/GMT+2
+2 ./Etc/GMT+3
+2 ./Etc/GMT+4
+2 ./Etc/GMT+5
+2 ./Etc/GMT+6
+2 ./Etc/GMT+7
+2 ./Etc/GMT+8
+2 ./Etc/GMT+9
+2 ./Etc/GMT-1
+2 ./Etc/GMT-10
+2 ./Etc/GMT-11
+2 ./Etc/GMT-12
+2 ./Etc/GMT-13
+2 ./Etc/GMT-2
+2 ./Etc/GMT-3
+2 ./Etc/GMT-4
+2 ./Etc/GMT-5
+2 ./Etc/GMT-6
+2 ./Etc/GMT-7
+2 ./Etc/GMT-8
+2 ./Etc/GMT-9
+54 ./Etc
+2 ./Mexico/BajaNorte
+2 ./Mexico/BajaSur
+2 ./Mexico/General
+8 ./Mexico
+8 ./Mideast/Riyadh87
+8 ./Mideast/Riyadh88
+8 ./Mideast/Riyadh89
+26 ./Mideast
+2 ./US/Alaska
+2 ./US/Aleutian
+2 ./US/Michigan
+2 ./US/Samoa
+2 ./US/Arizona
+4 ./US/Central
+2 ./US/East-Indiana
+4 ./US/Eastern
+2 ./US/Hawaii
+2 ./US/Mountain
+2 ./US/Pacific
+28 ./US
+6 ./src/README
+40 ./src/africa
+18 ./src/antarctica
+86 ./src/asia
+70 ./src/australasia
+8 ./src/backward
+6 ./src/etcetera
+224 ./src/europe
+2 ./src/factory
+102 ./src/northamerica
+4 ./src/pacificnew
+38 ./src/solar87
+38 ./src/solar88
+40 ./src/solar89
+54 ./src/southamerica
+4 ./src/systemv
+742 ./src
+2 ./CET
+2 ./Cuba
+2 ./EET
+2 ./Egypt
+4 ./Eire
+2 ./Factory
+4 ./GB
+2 ./Hongkong
+2 ./Iceland
+2 ./Iran
+2 ./Israel
+2 ./Jamaica
+2 ./Japan
+2 ./Kwajalein
+2 ./Libya
+2 ./MET
+2 ./NZ
+2 ./NZ-CHAT
+2 ./PRC
+2 ./Poland
+4 ./Portugal
+2 ./ROC
+2 ./ROK
+2 ./Singapore
+2 ./Turkey
+2 ./UCT
+2 ./UTC
+2 ./W-SU
+2 ./WET
+2 ./posixrules
+-------------------------------------------------------------------------------
+
+TRU64
+# Time Zone Selection List
+#
+# This is the list of time zones which are available for selection.
+# This file is used by time zone selection utilities such as those
+# called during installation.  With a few exceptions, time zone names
+# generally follow the naming convention of AREA/LOCATION.  Time zones
+# organized according to the older and less stable COUNTRY/ZONE format
+# still exist under /etc/zoneinfo/ for compatibility.  However, these
+# are obsolete & are each linked to one of the preferred time zone
+# files listed here.
+#
+Africa/Abidjan
+Africa/Accra
+Africa/Addis_Ababa
+Africa/Algiers
+Africa/Asmera
+Africa/Bamako
+Africa/Bangui
+Africa/Banjul
+Africa/Bissau
+Africa/Blantyre
+Africa/Brazzaville
+Africa/Bujumbura
+Africa/Cairo
+Africa/Casablanca
+Africa/Ceuta
+Africa/Conakry
+Africa/Dakar
+Africa/Dar_es_Salaam
+Africa/Djibouti
+Africa/Douala
+Africa/El_Aaiun
+Africa/Freetown
+Africa/Gaborone
+Africa/Harare
+Africa/Johannesburg
+Africa/Kampala
+Africa/Khartoum
+Africa/Kigali
+Africa/Kinshasa
+Africa/Lagos
+Africa/Libreville
+Africa/Lome
+Africa/Luanda
+Africa/Lubumbashi
+Africa/Lusaka
+Africa/Malabo
+Africa/Maputo
+Africa/Maseru
+Africa/Mbabane
+Africa/Mogadishu
+Africa/Monrovia
+Africa/Nairobi
+Africa/Ndjamena
+Africa/Niamey
+Africa/Nouakchott
+Africa/Ouagadougou
+Africa/Porto-Novo
+Africa/Sao_Tome
+Africa/Timbuktu
+Africa/Tripoli
+Africa/Tunis
+Africa/Windhoek
+America/Adak
+America/Anchorage
+America/Anguilla
+America/Antigua
+America/Araguaina
+America/Aruba
+America/Asuncion
+America/Barbados
+America/Belem
+America/Belize
+America/Bogota
+America/Boise
+America/Buenos_Aires
+America/Cancun
+America/Caracas
+America/Catamarca
+America/Cayenne
+America/Cayman
+America/Chicago
+America/Chihuahua
+America/Cordoba
+America/Costa_Rica
+America/Cuiaba
+America/Curacao
+America/Dawson
+America/Dawson_Creek
+America/Denver
+America/Detroit
+America/Dominica
+America/Edmonton
+America/El_Salvador
+America/Ensenada
+America/Fortaleza
+America/Glace_Bay
+America/Godthab
+America/Goose_Bay
+America/Grand_Turk
+America/Grenada
+America/Guadeloupe
+America/Guatemala
+America/Guayaquil
+America/Guyana
+America/Halifax
+America/Havana
+America/Indiana/Indianapolis
+America/Indiana/Knox
+America/Indiana/Marengo
+America/Indiana/Vevay
+America/Indianapolis
+America/Inuvik
+America/Iqaluit
+America/Jamaica
+America/Jujuy
+America/Juneau
+America/La_Paz
+America/Lima
+America/Los_Angeles
+America/Louisville
+America/Maceio
+America/Managua
+America/Manaus
+America/Martinique
+America/Mazatlan
+America/Mendoza
+America/Menominee
+America/Mexico_City
+America/Miquelon
+America/Montevideo
+America/Montreal
+America/Montserrat
+America/Nassau
+America/New_York
+America/Nipigon
+America/Nome
+America/Noronha
+America/Panama
+America/Pangnirtung
+America/Paramaribo
+America/Phoenix
+America/Port-au-Prince
+America/Port_of_Spain
+America/Porto_Acre
+America/Porto_Velho
+America/Puerto_Rico
+America/Rainy_River
+America/Rankin_Inlet
+America/Regina
+America/Rosario
+America/Santiago
+America/Santo_Domingo
+America/Sao_Paulo
+America/Scoresbysund
+America/Shiprock
+America/St_Johns
+America/St_Kitts
+America/St_Lucia
+America/St_Thomas
+America/St_Vincent
+America/Swift_Current
+America/Tegucigalpa
+America/Thule
+America/Thunder_Bay
+America/Tijuana
+America/Tortola
+America/Vancouver
+America/Whitehorse
+America/Winnipeg
+America/Yakutat
+America/Yellowknife
+Antarctica/Casey
+Antarctica/Davis
+Antarctica/DumontDUrville
+Antarctica/Mawson
+Antarctica/McMurdo
+Antarctica/Palmer
+Antarctica/South_Pole
+Antarctica/Syowa
+Arctic/Longyearbyen
+Asia/Aden
+Asia/Almaty
+Asia/Amman
+Asia/Anadyr
+Asia/Aqtau
+Asia/Aqtobe
+Asia/Ashkhabad
+Asia/Baghdad
+Asia/Bahrain
+Asia/Baku
+Asia/Bangkok
+Asia/Beirut
+Asia/Beijing
+Asia/Bishkek
+Asia/Brunei
+Asia/Calcutta
+Asia/Chungking
+Asia/Colombo
+Asia/Dacca
+Asia/Damascus
+Asia/Dubai
+Asia/Dushanbe
+Asia/Gaza
+Asia/Harbin
+Asia/Hong_Kong
+Asia/Irkutsk
+Asia/Istanbul
+Asia/Jakarta
+Asia/Jayapura
+Asia/Jerusalem
+Asia/Kabul
+Asia/Kamchatka
+Asia/Karachi
+Asia/Kashgar
+Asia/Katmandu
+Asia/Krasnoyarsk
+Asia/Kuala_Lumpur
+Asia/Kuching
+Asia/Kuwait
+Asia/Macao
+Asia/Magadan
+Asia/Manila
+Asia/Muscat
+Asia/Nicosia
+Asia/Novosibirsk
+Asia/Omsk
+Asia/Phnom_Penh
+Asia/Pyongyang
+Asia/Qatar
+Asia/Rangoon
+Asia/Riyadh
+Asia/Saigon
+Asia/Samarkand
+Asia/Seoul
+Asia/Shanghai
+Asia/Singapore
+Asia/Taipei
+Asia/Tashkent
+Asia/Tbilisi
+Asia/Tehran
+Asia/Thimbu
+Asia/Tokyo
+Asia/Ujung_Pandang
+Asia/Ulan_Bator
+Asia/Urumqi
+Asia/Vientiane
+Asia/Vladivostok
+Asia/Yakutsk
+Asia/Yekaterinburg
+Asia/Yerevan
+Atlantic/Azores
+Atlantic/Bermuda
+Atlantic/Canary
+Atlantic/Cape_Verde
+Atlantic/Faeroe
+Atlantic/Jan_Mayen
+Atlantic/Madeira
+Atlantic/Reykjavik
+Atlantic/South_Georgia
+Atlantic/St_Helena
+Atlantic/Stanley
+Australia/Adelaide
+Australia/Brisbane
+Australia/Broken_Hill
+Australia/Darwin
+Australia/Hobart
+Australia/Lindeman
+Australia/Lord_Howe
+Australia/Melbourne
+Australia/Perth
+Australia/Sydney
+CET
+CST6CDT
+EET
+EST
+EST5EDT
+Etc/GMT
+Etc/GMT+0
+Etc/GMT+1
+Etc/GMT+10
+Etc/GMT+11
+Etc/GMT+12
+Etc/GMT+13
+Etc/GMT+2
+Etc/GMT+3
+Etc/GMT+4
+Etc/GMT+5
+Etc/GMT+6
+Etc/GMT+7
+Etc/GMT+8
+Etc/GMT+9
+Etc/GMT-0
+Etc/GMT-1
+Etc/GMT-10
+Etc/GMT-11
+Etc/GMT-12
+Etc/GMT-13
+Etc/GMT-14
+Etc/GMT-2
+Etc/GMT-3
+Etc/GMT-4
+Etc/GMT-5
+Etc/GMT-6
+Etc/GMT-7
+Etc/GMT-8
+Etc/GMT-9
+Etc/GMT0
+Etc/Greenwich
+Etc/UCT
+Etc/UTC
+Etc/Universal
+Etc/Zulu
+Europe/Amsterdam
+Europe/Andorra
+Europe/Athens
+Europe/Belfast
+Europe/Belgrade
+Europe/Berlin
+Europe/Bratislava
+Europe/Brussels
+Europe/Bucharest
+Europe/Budapest
+Europe/Chisinau
+Europe/Copenhagen
+Europe/Dublin
+Europe/Gibraltar
+Europe/Helsinki
+Europe/Istanbul
+Europe/Kaliningrad
+Europe/Kiev
+Europe/Lisbon
+Europe/Ljubljana
+Europe/London
+Europe/Luxembourg
+Europe/Madrid
+Europe/Malta
+Europe/Minsk
+Europe/Monaco
+Europe/Moscow
+Europe/Oslo
+Europe/Paris
+Europe/Prague
+Europe/Riga
+Europe/Rome
+Europe/Samara
+Europe/San_Marino
+Europe/Sarajevo
+Europe/Simferopol
+Europe/Skopje
+Europe/Sofia
+Europe/Stockholm
+Europe/Tallinn
+Europe/Tirane
+Europe/Vaduz
+Europe/Vatican
+Europe/Vienna
+Europe/Vilnius
+Europe/Warsaw
+Europe/Zagreb
+Europe/Zurich
+Factory
+HST
+Indian/Antananarivo
+Indian/Chagos
+Indian/Christmas
+Indian/Cocos
+Indian/Comoro
+Indian/Kerguelen
+Indian/Mahe
+Indian/Maldives
+Indian/Mauritius
+Indian/Mayotte
+Indian/Reunion
+MET
+MST
+MST7MDT
+PST8PDT
+Pacific/Apia
+Pacific/Auckland
+Pacific/Chatham
+Pacific/Easter
+Pacific/Efate
+Pacific/Enderbury
+Pacific/Fakaofo
+Pacific/Fiji
+Pacific/Funafuti
+Pacific/Galapagos
+Pacific/Gambier
+Pacific/Guadalcanal
+Pacific/Guam
+Pacific/Honolulu
+Pacific/Johnston
+Pacific/Kiritimati
+Pacific/Kosrae
+Pacific/Kwajalein
+Pacific/Majuro
+Pacific/Marquesas
+Pacific/Midway
+Pacific/Nauru
+Pacific/Niue
+Pacific/Norfolk
+Pacific/Noumea
+Pacific/Pago_Pago
+Pacific/Palau
+Pacific/Pitcairn
+Pacific/Ponape
+Pacific/Port_Moresby
+Pacific/Rarotonga
+Pacific/Saipan
+Pacific/Tahiti
+Pacific/Tarawa
+Pacific/Tongatapu
+Pacific/Truk
+Pacific/Wake
+Pacific/Wallis
+Pacific/Yap
+SystemV/AST4
+SystemV/AST4ADT
+SystemV/CST6
+SystemV/CST6CDT
+SystemV/EST5
+SystemV/EST5EDT
+SystemV/HST10
+SystemV/MST7
+SystemV/MST7MDT
+SystemV/PST8
+SystemV/PST8PDT
+SystemV/YST9
+SystemV/YST9YDT
+WET
+
+
+
+
+--
+François REYGAGNE. Software Architect.
+opt[e]way S.A., 2881 route des Crêtes, BP308
+06906 Sophia Antipolis Cedex, FRANCE
+tél: +33 (0)4 92 95 27 01    http://www.opteway.com
+
+
+
+
+    Previous message: Time Lord
+    Next message: List of time zones compliant both for Linux, Solaris 5.8, OSF1 Tru64, HP-UX
+    Messages sorted by: [ date ] [ thread ] [ subject ] [ author ]
+
+More information about the tz mailing list
